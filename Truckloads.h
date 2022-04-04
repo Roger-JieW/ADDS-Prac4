@@ -1,13 +1,13 @@
 #ifndef TRUCKLOADS_H
 #define TRUCKLOADS_H
 #include <iostream>
-
 using namespace std;
-
-
-class TruckLoads{
+class Truckloads {
+	
 public:
-    int numTrucks(int numCrates, int loadSize);
 
+	int numTrucks(int numCrates, int loadSize);
 };
+
+		
 #endif

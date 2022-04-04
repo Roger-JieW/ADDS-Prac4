@@ -1,21 +1,21 @@
 #include <iostream>
-#include "EfficientTruckLoads.h"
-
+#include "EfficientTruckloads.h"
 using namespace std;
 
-int memoisation = 0;
-
-int EfficientTruckLoads::numTrucks(int numCrates, int loadSize){
-    if (numCrates <= loadSize) {
-        memoisation++;
-    }else{
-        if (numCrates % 2 == 0) {
-            numTrucks(numCrates/2,loadSize);
-            numTrucks(numCrates/2,loadSize);
-        }else{
-            numTrucks((numCrates+1)/2,loadSize);
-            numTrucks(numCrates/2,loadSize);
-        }
-    }
-    return memoisation;
-};
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize)
+{
+	if (numCrates==0){
+		return 0;
+	}
+	if (numCrates <= loadSize) {
+		return 1;
+	}
+	else
+	{
+		int first_half = 0;
+		int second_half = 0;
+		first_half = (numCrates + 1) / 2;
+		second_half = numCrates / 2;
+		return numTrucks(first_half, loadSize) + numTrucks(second_half, loadSize);
+	}
+}

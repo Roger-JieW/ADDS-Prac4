@@ -5,7 +5,7 @@
 using namespace std;
 
 
-class EfficientTruckLoads{
+class EfficientTruckloads{
 public:
     int numTrucks(int numCrates, int loadSize);
 
