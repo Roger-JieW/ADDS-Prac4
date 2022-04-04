@@ -5,7 +5,9 @@
 #include<vector>
 #include <sstream>
 #include <iterator>
+
 using namespace std;
+
 bool intorstr(string input){
   int inputSize = input.size();
 	for(int i=0;i<inputSize;i++){
@@ -15,6 +17,7 @@ bool intorstr(string input){
 	}
 	return 1;
 }
+
 int main(){
 	string text = "";
   getline(cin, text);
@@ -27,30 +30,23 @@ int main(){
     if(n == 0 ){
         iss >> first;
     }
-    if( n == 1)
-    {
+    if( n == 1){
         iss >> second;
     }
-    if(n == 2)
-    {
+    if(n == 2){
         iss >> third;
     }
-    if(n == 3)
-    {
+    if(n == 3){
         iss >>last;
     }
-
   }
 
-    
-	
 	Reverse a;
 	Truckloads b;
 	EfficientTruckloads c;
 	
 	if (!intorstr(first)||stoi(first) < 0) {
 		cout << "ERROR ";
-		
 	}
 	else{
 		cout<<a.reverseDigit(stoi(first))<<" ";

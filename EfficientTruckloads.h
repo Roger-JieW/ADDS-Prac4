@@ -4,10 +4,8 @@
 
 using namespace std;
 
-
 class EfficientTruckloads{
 public:
     int numTrucks(int numCrates, int loadSize);
-
 };
 #endif

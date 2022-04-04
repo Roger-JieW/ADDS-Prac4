@@ -2,16 +2,14 @@
 #include "EfficientTruckloads.h"
 using namespace std;
 
-int EfficientTruckloads::numTrucks(int numCrates, int loadSize)
-{
-	if (numCrates==0){
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
+	if(numCrates==0){
 		return 0;
 	}
-	if (numCrates <= loadSize) {
+	if(numCrates <= loadSize){
 		return 1;
 	}
-	else
-	{
+	else{
 		int first_half = 0;
 		int second_half = 0;
 		first_half = (numCrates + 1) / 2;

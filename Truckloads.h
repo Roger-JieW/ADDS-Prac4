@@ -2,10 +2,9 @@
 #define TRUCKLOADS_H
 #include <iostream>
 using namespace std;
-class Truckloads {
-	
-public:
 
+class Truckloads {
+public:
 	int numTrucks(int numCrates, int loadSize);
 };
 
