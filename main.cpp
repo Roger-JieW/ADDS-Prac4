@@ -7,7 +7,8 @@
 #include <iterator>
 using namespace std;
 bool intorstr(string input){
-	for(int i=0;i<input.size();i++){
+  int inputSize = input.size();
+	for(int i=0;i<inputSize;i++){
 		if(input[i]<48||input[i]>57){
 			return 0;
 		}
